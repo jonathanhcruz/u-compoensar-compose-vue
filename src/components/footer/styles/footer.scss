@@ -1,0 +1,18 @@
+.site-footer {
+  background: #1f2a2a;
+  color: #cfe9e0;
+  padding: 40px 0;
+}
+.footer-inner {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+}
+.footer-brand {
+  font-weight: 700;
+  font-size: 18px;
+}
+.footer-nav { display: flex; gap: 40px; }
+.footer-nav h4 { margin: 0 0 8px 0; color: #e6f3ee; }
+.footer-nav a { color: #cfe9e0; text-decoration: none; }
+.footer-copyright { margin-left: auto; opacity: 0.8; }

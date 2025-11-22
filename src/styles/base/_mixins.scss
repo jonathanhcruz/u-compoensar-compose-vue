@@ -1,0 +1,48 @@
+// Mixins for responsive design
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: #{$desktop}) {
+    @content;
+  }
+}
+
+@mixin large-desktop {
+  @media (max-width: #{$large-desktop}) {
+    @content;
+  }
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin btn-general {
+  background-color: $button-bg;
+  color: $white;
+  font-weight: bold;
+  border: none;
+
+  &:hover {
+    background-color: darken($button-bg, 10%);
+    color: $white;
+  }
+}

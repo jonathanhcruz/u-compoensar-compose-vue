@@ -1,0 +1,70 @@
+/* Styles for Customer component (detailed, moved from SFC) */
+.customer {
+  padding: 30px 0;
+  background: #f7fbfb; /* light page background */
+}
+.customer__inner {
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+}
+
+/* Media (image) */
+.customer__media-bg {
+  background: linear-gradient(180deg,#071827 0%, #0b2630 100%); /* dark blue/teal */
+  border-radius: 12px;
+  padding: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(10,20,30,0.08);
+}
+.customer__image {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+  background: transparent;
+  display: block;
+}
+
+/* Content */
+.customer__content {
+  flex: 1;
+}
+.customer__description {
+  color: #566170;
+  margin: 0 0 14px 0;
+  line-height: 1.65;
+  max-width: 54rem;
+}
+
+.customer__meta {
+  margin-bottom: 10px;
+}
+.customer__name {
+  margin: 0;
+  color: #10b981; /* green */
+  font-weight: 700;
+  font-size: 1rem;
+}
+.customer__role {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  margin-top: 6px;
+}
+
+.customer__badges {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin: 16px 0;
+}
+.customer__badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+}
+.customer__badge svg { width: 100%; height: 100%; display: block; }

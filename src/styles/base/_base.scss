@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-family-primary;
+  line-height: 1.6;
+  color: $text-dark;
+  background-color: $light-gray;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 $spacing-md;
+  
+  @include tablet {
+    padding: 0 $spacing-sm;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: $spacing-sm;
+}
+
+h1 {
+  font-size: $font-size-3xl;
+  
+  @include tablet {
+    font-size: $font-size-2xl;
+  }
+}
+
+h2 {
+  font-size: $font-size-2xl;
+  
+  @include tablet {
+    font-size: $font-size-xl;
+  }
+}
+
+h3 {
+  font-size: $font-size-xl;
+}
+
+p {
+  margin-bottom: $spacing-sm;
+  color: $text-light;
+}
+
+a {
+  color: $black;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  
+  &:hover {
+    color: $secondary-color;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: $spacing-xl;
+  color: $text-dark;
+}
