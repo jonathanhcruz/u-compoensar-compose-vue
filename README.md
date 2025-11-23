@@ -2,17 +2,15 @@
 
 A simple front-end project created as coursework for Ucompensar University. This repository contains a small static SPA built with Vue 3, TypeScript and Vite intended as an educational/demo template.
 
+## Link to the explanatory video
+[https://www.youtube.com/watch?v=WngUz93dITU](https://www.youtube.com/watch?v=WngUz93dITU)
+[https://youtu.be/e6-Jw7F6tI0?si=Quufzxk4m5kU3wTY](https://youtu.be/e6-Jw7F6tI0?si=Quufzxk4m5kU3wTY)
+
 ## References
 
 <img width="700" alt="Screenshot 2025-11-11 at 9 12 36 PM" src="https://github.com/user-attachments/assets/83cc6449-0aaa-460a-8a34-2f2e868139ed" />
 <img width="700" height="1286" alt="Screenshot 2025-11-22 at 10 43 11 PM" src="https://github.com/user-attachments/assets/f1890264-d2ac-493d-9284-c5f3dc21c70a" />
 <img width="700" height="1233" alt="Screenshot 2025-11-22 at 10 44 05 PM" src="https://github.com/user-attachments/assets/fba51320-0a13-4e6b-9b08-fa4fefb14eb1" />
-
-
-## Link to the explanatory video
-
-[https://youtu.be/e6-Jw7F6tI0?si=Quufzxk4m5kU3wTY](https://youtu.be/e6-Jw7F6tI0?si=Quufzxk4m5kU3wTY)
-
 
 
 ## Strapi integration — dynamic content (ADDED)
