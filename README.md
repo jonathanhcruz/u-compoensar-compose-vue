@@ -4,6 +4,7 @@ A simple front-end project created as coursework for Ucompensar University. This
 
 ## Link to the explanatory video
 [https://www.youtube.com/watch?v=WngUz93dITU](https://www.youtube.com/watch?v=WngUz93dITU)
+
 [https://youtu.be/e6-Jw7F6tI0?si=Quufzxk4m5kU3wTY](https://youtu.be/e6-Jw7F6tI0?si=Quufzxk4m5kU3wTY)
 
 ## References
