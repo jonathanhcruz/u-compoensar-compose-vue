@@ -3,9 +3,9 @@
 A simple front-end project created as coursework for Ucompensar University. This repository contains a small static SPA built with Vue 3, TypeScript and Vite intended as an educational/demo template.
 
 ## Link to the explanatory video
-[https://www.youtube.com/watch?v=WngUz93dITU](https://www.youtube.com/watch?v=WngUz93dITU)
+[https://www.youtube.com/watch?v=WngUz93dITU](https://www.youtube.com/watch?v=WngUz93dITU) Structure proyect
 
-[https://youtu.be/e6-Jw7F6tI0?si=Quufzxk4m5kU3wTY](https://youtu.be/e6-Jw7F6tI0?si=Quufzxk4m5kU3wTY)
+[https://youtu.be/e6-Jw7F6tI0?si=Quufzxk4m5kU3wTY](https://youtu.be/e6-Jw7F6tI0?si=Quufzxk4m5kU3wTY) Implement Strapi and dinamyc components  🚨🚨
 
 ## References
 
