@@ -1,16 +1,21 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router'
+import { computed } from 'vue'
+import type { CustomerProps } from './types/customer-props'
+import { resolveMediaSrc, resolveMediaAlt } from '../../helpers/media'
 
-const { name, role, description, badges } = defineProps({
-  name: { type: String, default: 'Tim Smith' },
-  role: { type: String, default: 'British Dragon Boat Racing Association' },
-  description: { type: String, default: 'Maecenas dignissim justo eget nulla rutrum molestie. Maecenas lobortis sem dui, vel rutrum risus tincidunt ullamcorper. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.' },
-  badges: { type: Array as () => string[], default: () => [
-    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#7c3aed"/></svg>',
-    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3" fill="#06b6d4"/></svg>',
-    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 L22 22 H2 Z" fill="#10b981"/></svg>'
-  ] }
-})
+const raw = defineProps<CustomerProps>()
+
+const title = computed(() => raw.title)
+const description = computed(() => raw.description)
+const subTitle = computed(() => raw.subTitle)
+const linkText = computed(() => raw.linkText)
+const linkUrl = computed(() => raw.link)
+const blank = raw.blank ?? false
+
+const image = computed(() => raw.image ?? null)
+const imageSrc = computed(() => resolveMediaSrc(image.value))
+const imageAlt = computed(() => resolveMediaAlt(image.value, title.value))
 </script>
 
 <template>
@@ -18,23 +23,23 @@ const { name, role, description, badges } = defineProps({
     <div class="customer__inner container">
       <div class="customer__media">
         <div class="customer__media-bg">
-          <img src="../../assets/img/customers.png" :alt="name" class="customer__image"/>
+          <img v-if="imageSrc" :src="imageSrc" :alt="imageAlt" class="customer__image"/>
+          <img v-else src="../../assets/img/customers.png" :alt="title" class="customer__image"/>
         </div>
       </div>
 
       <div class="customer__content">
+        <header class="customer__header">
+          <p class="customer__eyebrow">{{ subTitle }}</p>
+          <h2 class="customer__title">{{ title }}</h2>
+        </header>
+
         <p class="customer__description">{{ description }}</p>
 
-        <div class="customer__meta">
-          <h3 class="customer__name">{{ name }}</h3>
-          <div class="customer__role">{{ role }}</div>
+        <div class="customer__link-wrap">
+          <a v-if="blank" :href="linkUrl" target="_blank" rel="noopener noreferrer" class="customer__link">{{ linkText }}</a>
+          <RouterLink v-else :to="linkUrl" class="customer__link">{{ linkText }}</RouterLink>
         </div>
-
-        <div class="customer__badges" v-if="badges && badges.length">
-          <span v-for="(b, i) in badges" :key="i" class="customer__badge" v-html="b"></span>
-        </div>
-
-        <RouterLink to="/customers" class="customer__link">Meet all customers <span class="arrow">→</span></RouterLink>
       </div>
     </div>
   </section>

@@ -1,29 +1,28 @@
+<script setup lang="ts">
+import { RouterLink } from 'vue-router'
+import { computed } from 'vue'
+import type { CommunityProps } from './types/community-props'
+
+const raw = defineProps<CommunityProps>()
+
+const title = computed(() => raw.title)
+const subTitle = computed(() => raw.subTitle)
+const cardsList = computed(() => Array.isArray(raw.card) ? raw.card : [])
+</script>
+
 <template>
   <section class="community">
     <div class="community__inner">
       <header class="community__header">
-        <p class="community__eyebrow">Manage your entire community</p>
-        <h2 class="community__title">In a single system</h2>
-        <p class="community__subtitle">Who is this product suitable for?</p>
+        <h2 class="community__title">{{ title }}</h2>
+        <p class="community__subtitle">{{ subTitle }}</p>
       </header>
 
       <div class="community__grid">
-        <RouterLink to="/membership" class="community__card" aria-label="Membership Organisations">
-          <div class="community__icon" aria-hidden="true">🏛️</div>
-          <h3 class="community__card-title">Membership Organisations</h3>
-          <p class="community__card-text">Our membership management software provides full automation of membership renewals and payments.</p>
-        </RouterLink>
-
-        <RouterLink to="/national" class="community__card" aria-label="National Associations">
-          <div class="community__icon" aria-hidden="true">🌐</div>
-          <h3 class="community__card-title">National Associations</h3>
-          <p class="community__card-text">Our membership management software provides full automation of membership renewals and payments.</p>
-        </RouterLink>
-
-        <RouterLink to="/clubs" class="community__card" aria-label="Clubs And Groups">
-          <div class="community__icon" aria-hidden="true">🤝</div>
-          <h3 class="community__card-title">Clubs And Groups</h3>
-          <p class="community__card-text">Our membership management software provides full automation of membership renewals and payments.</p>
+        <RouterLink v-for="card in cardsList" :key="card.id" :to="card.to || '/#'" class="community__card" :aria-label="card.ariaLabel || card.title">
+          <div class="community__icon" aria-hidden="true">{{ card.icon ?? '🏛️' }}</div>
+          <h3 class="community__card-title">{{ card.title }}</h3>
+          <p class="community__card-text">{{ card.description }}</p>
         </RouterLink>
       </div>
     </div>
@@ -33,4 +32,3 @@
 <style scoped lang="scss">
 @import './styles/community.scss';
 </style>
-

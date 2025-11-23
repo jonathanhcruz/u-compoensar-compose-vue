@@ -22,6 +22,7 @@
       color: $text-light;
       font-weight: 600;
       font-size: 14px;
+      text-transform: capitalize;
     }
 
     .hero__title {
@@ -32,12 +33,14 @@
       align-items: baseline;
       gap: 12px;
       color: $primary-color;
+      text-transform: capitalize;
     }
 
     .hero__subtitle {
       margin: 0 0 20px 0;
       color: $text-light;
       max-width: 520px;
+      text-transform: capitalize;
     }
 
     .hero__cta {
@@ -50,7 +53,7 @@
 
   .hero__figure {
     width: 100%;
-    max-width: 300px;
+    max-width: 450px;
 
     img {
       width: 100%;

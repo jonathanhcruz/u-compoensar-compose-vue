@@ -25,7 +25,7 @@ export const dataPage: IdataPage = {
     },
     actions: {
         async fetchHomePage({ commit }: { commit: (m: string, p?: any) => void }) {
-            const res = await apiGet('/api/home?populate=*')
+            const res = await apiGet('/api/home?populate[components][populate]=*')
             if (!res.ok) {
                 console.error('Failed to fetch home page:', res.error)
                 Router.push('/404');
